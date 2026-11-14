@@ -11,11 +11,17 @@
  */
 public class Course {
     //fields
-    String cCode;
-    String cName;
-    int cStart;
-    int cEnd;
-    int cLength;
+    private String cCode;
+    private String cName;
+    private double cStart;
+    private double cEnd;
+    private double cLength;
+
+    public Course(String courseName, String courseCode, double courseStart, double courseEnd){
+        setCourseName(courseName);
+        setCourseCode(courseCode);
+        setCourseLength(courseStart, courseEnd);
+    }
 
     //methods
 
@@ -40,7 +46,7 @@ public class Course {
      * @param courseStart
      * @param courseEnd
      */
-    public void setCourseLength(int courseStart, int courseEnd){
+    public void setCourseLength(double courseStart, double courseEnd){
         cStart = courseStart;
         cEnd = courseEnd;
         cLength = cEnd - cStart;
@@ -66,7 +72,7 @@ public class Course {
      * 
      * @return the start time of the lecture
      */
-    public int getCourseStart(){
+    public double getCourseStart(){
         return cStart;
     }
 
@@ -74,7 +80,7 @@ public class Course {
      * 
      * @return the end time of the lecture
      */
-    public int getCourseEnd(){
+    public double getCourseEnd(){
         return cEnd;
     }
 
@@ -82,7 +88,7 @@ public class Course {
      * 
      * @return the length of the lecture
      */
-    public int getCourseLength(){
+    public double getCourseLength(){
         return cLength;
     }
     
